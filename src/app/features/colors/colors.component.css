@@ -1,0 +1,16 @@
+.colors-container{
+    background-color: chartreuse;
+    
+}
+
+.color-grid{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+.active-color{
+ display: flex;
+ justify-content: center;
+ padding: 10%;
+}

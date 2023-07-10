@@ -18,7 +18,7 @@ import { ControlsComponent } from './controls/controls.component';
     CommonModule
   ],
   exports:[
-    CanvasComponent,ToolsComponent,
+    CanvasComponent,ToolsComponent,ColorsComponent,ControlsComponent
   ]
 })
 export class FeaturesModule { }

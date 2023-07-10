@@ -1,1 +1,24 @@
-<p>colors works!</p>
+<div class="colors-container">
+
+    <div>Click on a color to select it</div>
+
+        <div class="color-grid">
+
+            <div style="width:40px;height:40px;background:green;" id="green" (click)="changeColor($event)"></div>
+            <div style="width:40px;height:40px;background:blue;" id="blue"(click)="changeColor($event)"></div>
+            <div style="width:40px;height:40px;background:red;" id="red" (click)="changeColor($event)"></div>
+            <div style="width:40px;height:40px;background:yellow;" id="yellow" (click)="changeColor($event)"></div>
+            <div style="width:40px;height:40px;background:orange;" id="orange" (click)="changeColor($event)"></div>
+            <div style="width:40px;height:40px;background:black;" id="black" (click)="changeColor($event)"></div>
+            <div style="width:38px;height:38px;background:white;border:2px solid;" id="white" (click)="changeColor($event)"></div>
+
+    
+        </div>
+
+    <div>Active Color </div>
+    <div class="active-color" [style.background]="coloractive"></div>
+
+    
+
+</div>
+

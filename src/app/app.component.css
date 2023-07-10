@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+
+    padding: 2%;
+}
+
+.row{
+    display: flex;
+
+    flex-wrap: wrap;
+    background: orange;
+    justify-content: space-around;
+}

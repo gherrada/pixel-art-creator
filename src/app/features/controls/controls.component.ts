@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CanvasService } from 'src/app/shared/services/canvas.service';
 
 @Component({
   selector: 'app-controls',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./controls.component.css']
 })
 export class ControlsComponent {
+
+  constructor(private canvasService:CanvasService){}
+
+  saveCanvasHandler(){
+    this.canvasService.saveCanvas();
+  }
+
+  newCanvasHandler(){
+    this.canvasService.newCanvas();
+  }
 
 }

@@ -12,6 +12,8 @@ export class ColorsComponent {
 
   public coloractive:String='#f3f3f3';
 
+  colors:string[] =["green","blue","red","yellow","orange","black","white"];
+
   constructor(private colorService:ColorService){}
 
   changeColor(event:any){

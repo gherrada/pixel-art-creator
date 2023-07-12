@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { CanvasService } from 'src/app/shared/services/canvas.service';
 import { ColorService } from 'src/app/shared/services/color.service';
 
 @Component({
@@ -13,7 +14,7 @@ import { ColorService } from 'src/app/shared/services/color.service';
 export class CanvasComponent implements OnInit {
 
 
-  constructor(private colorService:ColorService){}
+  constructor(private colorService:ColorService,private canvasService:CanvasService){}
 
 
   @ViewChild('canvas',{static:true}) canvas!:ElementRef;
@@ -22,10 +23,13 @@ export class CanvasComponent implements OnInit {
     const canvas:HTMLCanvasElement = this.canvas.nativeElement;
     const context = canvas.getContext('2d');
 
+
     if(context){
+      this.canvasService.setCanvasContext(context);
+
       this.drawGrid(context,40);
-      context.fillStyle="red";
-      this.#drawRectangle(context);
+      //context.fillStyle="red";
+      //this.#drawRectangle(context);
 
     }
 

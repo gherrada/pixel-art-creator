@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './tools.component.html',
   styleUrls: ['./tools.component.css']
 })
+
+
 export class ToolsComponent {
+
+
+
 
 }

@@ -13,4 +13,5 @@
  display: flex;
  justify-content: center;
  padding: 10%;
+ border: 1px solid black;
 }

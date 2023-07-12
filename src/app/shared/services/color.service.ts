@@ -16,6 +16,7 @@ export class ColorService {
   }
 
   setActiveColor(color:string){
+
     this.activeColor = color;
   }
 }

@@ -19,7 +19,8 @@ export class ColorsComponent {
     let element = event.target||event.srcElement||event.currentTarget;
     let elementId = element.id;
 
-    this.colorService.setActiveColor = elementId;
+    this.colorService.setActiveColor(elementId);
+    
     this.coloractive=elementId;
   
   }

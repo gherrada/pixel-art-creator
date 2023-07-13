@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToolService } from 'src/app/shared/services/tool.service';
 
 @Component({
   selector: 'app-tools',
@@ -9,7 +10,9 @@ import { Component } from '@angular/core';
 
 export class ToolsComponent {
 
+constructor(private toolService:ToolService){}
 
-
-
+setActiveTool(toolId:string){
+  this.toolService.setActiveTool(toolId);
+}
 }

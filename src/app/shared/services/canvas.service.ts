@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { ColorService } from './color.service';
+import { ToolService } from './tool.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ export class CanvasService {
 
   private canvasContext!: CanvasRenderingContext2D;
 
-  constructor() { }
+  constructor(private colorService:ColorService, private toolService:ToolService) { }
 
 
   getCanvasContext():CanvasRenderingContext2D{
@@ -56,6 +58,19 @@ export class CanvasService {
       }
     }
     c.closePath();
+  }
+
+  drawPixel(context:CanvasRenderingContext2D,cellWidth:number,x:number, y:number){
+    let color:string = this.colorService.getActiveColor();
+
+   if(this.toolService.getActiveTool().includes('pen')){
+    context.fillStyle=color;
+    
+   }else if(this.toolService.getActiveTool().includes('eraser')){
+    context.fillStyle="white";
+   }
+
+    context.fillRect(x,y,cellWidth,cellWidth);
   }
 
   

@@ -44,7 +44,9 @@ export class CanvasComponent implements OnInit {
     let y = pixelSize*Math.floor(event.offsetY/pixelSize);
   
 
-    this.drawPixel(this.canvas.nativeElement.getContext('2d'),pixelSize,x,y);
+   // this.drawPixel(this.canvas.nativeElement.getContext('2d'),pixelSize,x,y);
+
+    this.canvasService.drawPixel(this.canvas.nativeElement.getContext('2d'),pixelSize,x,y);
   }
 
   #drawRectangle(context:CanvasRenderingContext2D){

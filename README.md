@@ -20,7 +20,7 @@ The main features are:
 
 Characteristics of the image
 
-Right now it keeps a transparent background.  So unless you paint parts of thr background with white,
+Right now it keeps a transparent background.  So unless you paint parts of the background with white,
 the png will only show what you draw.
 
 Future features

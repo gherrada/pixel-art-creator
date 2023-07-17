@@ -1,5 +1,5 @@
 .colors-container{
-    background-color: chartreuse;
+    background-color: cadetblue;
     
 }
 
@@ -14,4 +14,10 @@
  justify-content: center;
  padding: 10%;
  border: 1px solid black;
+}
+
+h2{
+    text-align: center;
+    padding-top: 4%;
+    color: aliceblue;
 }

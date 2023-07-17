@@ -5,13 +5,15 @@
 
 .main-container{
 
-    padding: 2%;
+    padding: 1%;
 }
 
 .row{
     display: flex;
 
     flex-wrap: wrap;
-    background: orange;
+    background: rgb(219, 214, 205);
     justify-content: space-around;
+
+    padding: 1% 0;
 }

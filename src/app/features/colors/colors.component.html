@@ -1,13 +1,13 @@
 <div class="colors-container">
 
-    <div>Click on a color to select it</div>
+    <h2>Click on a color to select it</h2>
 
      
         <div class="color-grid" >
             <div *ngFor="let color of colors" style="width: 40px;height: 40px;" [style.background]=color id={{color}} (click)="changeColor($event)"></div>
         </div>
 
-    <div>Active Color </div>
+    <h2>Active Color </h2>
     <div class="active-color" [style.background]="coloractive"></div>
 
     

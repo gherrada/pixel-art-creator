@@ -26,7 +26,6 @@ export class CanvasService {
     const canvasRef = this.canvasContext.canvas;
     this.canvasContext.clearRect(0, 0, canvasRef.width, canvasRef.height);
 
-    this.drawGrid(this.canvasContext,40);
 
   };
 
@@ -65,12 +64,14 @@ export class CanvasService {
 
    if(this.toolService.getActiveTool().includes('pen')){
     context.fillStyle=color;
+    context.fillRect(x,y,cellWidth,cellWidth);
     
    }else if(this.toolService.getActiveTool().includes('eraser')){
-    context.fillStyle="white";
+    context.clearRect(x,y,cellWidth,cellWidth);
+
    }
 
-    context.fillRect(x,y,cellWidth,cellWidth);
+    
   }
 
   

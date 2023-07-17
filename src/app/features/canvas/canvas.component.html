@@ -1,4 +1,9 @@
 
 
-<canvas #canvas width="440px" height="440px" style="border: 1px solid black;" (click)="drawHandler($event)">
-</canvas>
+<div  class="canvas-layer-container" style="position: relative;">
+    <canvas #grid width="440px" height="440px" ></canvas>
+
+    <canvas #canvas width="440px" height="440px" style="border: 1px solid black; z-index: 1; position: absolute; left: 0; top: 0;" (click)="drawHandler($event)">
+    </canvas>
+
+</div>
